@@ -1,0 +1,42 @@
+h1 {
+  color: aqua;
+  font-style: italic;
+  /* font chữ */
+  font-family: "Times New Roman", Times, serif;
+  /* chuyển chữ hoa thường */
+  text-transform: uppercase;
+  /* căn giữa */
+  text-align: center;
+  /* cỡ chữ */
+  font-size: 15;
+}
+input:checked ~ video {
+  display: none;
+}
+body {
+  position: relative; /* Thiết lập ngữ cảnh cho pseudo-element */
+  margin: 0; /* Reset khoảng cách mặc định của trình duyệt. */
+  padding: 0; /*Đảm bảo nội dung không bị thụt lề.*/
+  min-height: 100vh; /* Đảm bảo body chiếm full màn hình */
+  font-family: Arial, sans-serif; /* Ví dụ style cho nội dung */
+  color: #333; /* Màu chữ rõ ràng trên nền mờ */
+}
+
+body::before {
+  content: ""; /* Bắt buộc có để pseudo-element hoạt động */
+  background-image: url(../images/robotbg.jpg);
+  background-size: cover; /* Phủ đầy màn hình */
+  background-position: center; /* Căn giữa ảnh */
+  background-repeat: no-repeat; /* Ngăn ảnh nền lặp lại khi nhỏ. */
+  filter: blur(5px); /* Độ mờ (điều chỉnh px theo ý muốn) */
+  opacity: 0.8; /* Độ trong suốt (0.1 - 1) */
+  position: absolute; /* Phủ toàn bộ body */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Đặt sau nội dung */
+}
+video{
+  volume="0.01"
+}
